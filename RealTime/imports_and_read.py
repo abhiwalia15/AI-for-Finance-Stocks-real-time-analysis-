@@ -11,3 +11,5 @@ plt.style.use('fivethirtyeight')
 
 from nsepy import get_history
 from datetime import date
+
+import streamlit as st
