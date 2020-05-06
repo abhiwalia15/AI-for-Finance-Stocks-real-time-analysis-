@@ -116,22 +116,22 @@ def main():
         st.area_chart(df2['Close'])
 
     
-    if(choose_stock == "Aditya Birla Fashion Retail Ltd."):
+    elif(choose_stock == "IndiaBulls HSG"):
 
         # get abfrl real time stock price
-        df1 = get_history(symbol='abfrl', start=date(2010,1,1), end=date.today())
-        df1['Date'] = df1.index
+        df3 = get_history(symbol='ibulhsgfin', start=date(2010,1,1), end=date.today())
+        df3['Date'] = df3.index
 
-        st.header("Aditya Birla Fashion NSE Last 5 Days DataFrame:")
+        st.header("IndiaBulls HSG NSE Last 5 Days DataFrame:")
         
         # Insert Check-Box to show the snippet of the data.
         if st.checkbox('Show Raw Data'):
             st.subheader("Showing raw data---->>>")	
-            st.dataframe(df1.tail())
+            st.dataframe(df3.tail())
         
         ## Predictions and adding it to Dashboard
         #Create a new dataframe
-        new_df = df1.filter(['Close'])
+        new_df = df3.filter(['Close'])
         #Scale the all of the data to be values between 0 and 1 
         scaler = MinMaxScaler(feature_range=(0, 1)) 
         scaled_data = scaler.fit_transform(new_df)
@@ -148,7 +148,7 @@ def main():
         #Reshape the data
         X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
         #load the model
-        model = load_model("abfrl.model")
+        model = load_model("ibulhsgfin.model")
         #Get the predicted scaled price
         pred_price = model.predict(X_test)
         #undo the scaling 
@@ -162,16 +162,16 @@ def main():
 
         ##visualizations
         st.subheader("Close Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df1['Close'])
+        st.area_chart(df3['Close'])
 
         st.subheader("Open Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df1['Open'])
+        st.area_chart(df3['Open'])
 
         st.subheader("High Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df1['High'])
+        st.area_chart(df3['High'])
 
         st.subheader("Low Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df1['Low'])
+        st.area_chart(df3['Low'])
 
 
 if __name__ == '__main__':
