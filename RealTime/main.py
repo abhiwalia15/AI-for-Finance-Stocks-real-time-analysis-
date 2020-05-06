@@ -1,9 +1,47 @@
 from imports_and_read import * 
 
 def main():
+    
+    image = Image.open('sm.jpeg')
+    st.image(image,use_column_width=True)
 
-    st.title("NSE Real-Time Stocks Analysis")
+    st.title("NSE Real-Time Stocks Analysis and Predictions")
+    
     st.header("Select the stock and check its next day predicted value")
+    
+    st.subheader("This study is mainly confined to the s tock market behavior and is \
+                intended to devise certain techniques for investors to make reasonable\
+                returns from investments .")
+    
+    st.subheader("Though there were a number of studies , which\
+                deal with analysis of stock price behaviours , the use of control chart\
+                techniques and fai lure time analysis would be new to the investors. The\
+                concept of stock price elast icity,\
+                introduced in this study, will be a good\
+                tool to measure the sensitivity of stock price movements.")
+    
+    st.subheader("In this study, \
+                 Predictions for the close price is suggested for the National Stock Exchange index,\
+                Nifty,\
+                based on Long Short Term Based (LSTM)\
+                method.") 
+    
+    st.subheader("We make predictions based on the last 30 days Closing price data\
+                which we fetch from NSE India website in realtime.")
+    
+    st.markdown("Note: This is just a fun project, No one can predict the\
+         stock market as of today because there are a\
+        lot of factors which needs to be considered\
+             before makaing any investments, especially in StockMarket.\
+            So it is advisable now to indulge in any\
+                 bad decisions based on the predictions shown here.")
+
+    st.header("THANKS FOLKS!!")
+    
+    st.subheader("Happy Learning")
+
+    st.subheader("Creator: MRINAL WALIA😈😈😈")
+
 
     # Stock Section
     choose_stock = st.sidebar.selectbox("Choose the Stock!",
@@ -50,7 +88,7 @@ def main():
         # next day
         NextDay_Date = datetime.date.today() + datetime.timedelta(days=1)
 
-        st.subheader("Predictions for the next upcoming day : " + str(NextDay_Date))
+        st.subheader("Predictions for the next upcoming day Close Price : " + str(NextDay_Date))
         st.markdown(pred_price)
 
         ##visualizations
@@ -107,13 +145,21 @@ def main():
         # next day
         NextDay_Date = datetime.date.today() + datetime.timedelta(days=1)
 
-        st.subheader("Predictions for the next upcoming day : " + str(NextDay_Date))
+        st.subheader("Predictions for the next upcoming day Close Price : " + str(NextDay_Date))
         st.markdown(pred_price)
 
         ##visualizations
         st.subheader("Close Price VS Date Interactive chart for analysis : ")
-        
         st.area_chart(df2['Close'])
+
+        st.subheader("Open Price VS Date Interactive chart for analysis : ")
+        st.area_chart(df2['Open'])
+
+        st.subheader("High Price VS Date Interactive chart for analysis : ")
+        st.area_chart(df2['High'])
+
+        st.subheader("Low Price VS Date Interactive chart for analysis : ")
+        st.area_chart(df2['Low'])
 
     
     elif(choose_stock == "IndiaBulls HSG"):
@@ -157,7 +203,7 @@ def main():
         # next day
         NextDay_Date = datetime.date.today() + datetime.timedelta(days=1)
 
-        st.subheader("Predictions for the next upcoming day : " + str(NextDay_Date))
+        st.subheader("Predictions for the next upcoming day Close Price : " + str(NextDay_Date))
         st.markdown(pred_price)
 
         ##visualizations
@@ -214,7 +260,7 @@ def main():
         # next day
         NextDay_Date = datetime.date.today() + datetime.timedelta(days=1)
 
-        st.subheader("Predictions for the next upcoming day : " + str(NextDay_Date))
+        st.subheader("Predictions for the next upcoming day Close Price : " + str(NextDay_Date))
         st.markdown(pred_price)
 
         ##visualizations
@@ -271,7 +317,7 @@ def main():
         # next day
         NextDay_Date = datetime.date.today() + datetime.timedelta(days=1)
 
-        st.subheader("Predictions for the next upcoming day : " + str(NextDay_Date))
+        st.subheader("Predictions for the next upcoming day Close Price : " + str(NextDay_Date))
         st.markdown(pred_price)
 
         ##visualizations
@@ -328,7 +374,7 @@ def main():
         # next day
         NextDay_Date = datetime.date.today() + datetime.timedelta(days=1)
 
-        st.subheader("Predictions for the next upcoming day : " + str(NextDay_Date))
+        st.subheader("Predictions for the next upcoming day Close Price : " + str(NextDay_Date))
         st.markdown(pred_price)
 
         ##visualizations
@@ -347,8 +393,8 @@ def main():
     elif(choose_stock == "TataMotors"):
 
         # get abfrl real time stock price
-        df6 = get_history(symbol='tatamotors', start=date(2010,1,1), end=date.today())
-        df6['Date'] = df6.index
+        df7 = get_history(symbol='tatamotors', start=date(2010,1,1), end=date.today())
+        df7['Date'] = df7.index
 
         st.header("TataMotors NSE Last 5 Days DataFrame:")
         
@@ -385,7 +431,7 @@ def main():
         # next day
         NextDay_Date = datetime.date.today() + datetime.timedelta(days=1)
 
-        st.subheader("Predictions for the next upcoming day : " + str(NextDay_Date))
+        st.subheader("Predictions for the next upcoming day Close Price : " + str(NextDay_Date))
         st.markdown(pred_price)
 
         ##visualizations
