@@ -92,17 +92,14 @@ def main():
         st.markdown(pred_price)
 
         ##visualizations
-        st.subheader("Close Price VS Date Interactive chart for analysis : ")
+        st.subheader("Close Price VS Date Interactive chart for analysis:")
         st.area_chart(df1['Close'])
 
-        st.subheader("Open Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df1['Open'])
+        st.subheader("Line chart of Open and Close for analysis:")
+        st.area_chart(df1[['Open','Close']])
 
-        st.subheader("High Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df1['High'])
-
-        st.subheader("Low Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df1['Low'])
+        st.subheader("Line chart of High and Low for analysis:")
+        st.line_chart(df1[['High','Low']])
 
     elif(choose_stock == "PowerMech Solns."):
 
@@ -149,17 +146,14 @@ def main():
         st.markdown(pred_price)
 
         ##visualizations
-        st.subheader("Close Price VS Date Interactive chart for analysis : ")
+        st.subheader("Close Price VS Date Interactive chart for analysis:")
         st.area_chart(df2['Close'])
 
-        st.subheader("Open Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df2['Open'])
+        st.subheader("Line chart of Open and Close for analysis:")
+        st.area_chart(df2[['Open','Close']])
 
-        st.subheader("High Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df2['High'])
-
-        st.subheader("Low Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df2['Low'])
+        st.subheader("Line chart of High and Low for analysis:")
+        st.line_chart(df2[['High','Low']])
 
     
     elif(choose_stock == "IndiaBulls HSG"):
@@ -207,17 +201,14 @@ def main():
         st.markdown(pred_price)
 
         ##visualizations
-        st.subheader("Close Price VS Date Interactive chart for analysis : ")
+        st.subheader("Close Price VS Date Interactive chart for analysis:")
         st.area_chart(df3['Close'])
 
-        st.subheader("Open Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df3['Open'])
+        st.subheader("Line chart of Open and Close for analysis:")
+        st.area_chart(df3[['Open','Close']])
 
-        st.subheader("High Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df3['High'])
-
-        st.subheader("Low Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df3['Low'])
+        st.subheader("Line chart of High and Low for analysis:")
+        st.line_chart(df3[['High','Low']])
 
     elif(choose_stock == "INOX Leisure"):
 
@@ -264,17 +255,14 @@ def main():
         st.markdown(pred_price)
 
         ##visualizations
-        st.subheader("Close Price VS Date Interactive chart for analysis : ")
+        st.subheader("Close Price VS Date Interactive chart for analysis:")
         st.area_chart(df4['Close'])
 
-        st.subheader("Open Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df4['Open'])
+        st.subheader("Line chart of Open and Close for analysis:")
+        st.area_chart(df4[['Open','Close']])
 
-        st.subheader("High Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df4['High'])
-
-        st.subheader("Low Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df4['Low'])
+        st.subheader("Line chart of High and Low for analysis:")
+        st.line_chart(df4[['High','Low']])
 
     elif(choose_stock == "RepcoHomes"):
 
@@ -321,17 +309,14 @@ def main():
         st.markdown(pred_price)
 
         ##visualizations
-        st.subheader("Close Price VS Date Interactive chart for analysis : ")
+        st.subheader("Close Price VS Date Interactive chart for analysis:")
         st.area_chart(df5['Close'])
 
-        st.subheader("Open Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df5['Open'])
+        st.subheader("Line chart of Open and Close for analysis:")
+        st.area_chart(df5[['Open','Close']])
 
-        st.subheader("High Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df5['High'])
-
-        st.subheader("Low Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df5['Low'])
+        st.subheader("Line chart of High and Low for analysis:")
+        st.line_chart(df5[['High','Low']])
 
     elif(choose_stock == "SpiceJet"):
 
@@ -378,17 +363,14 @@ def main():
         st.markdown(pred_price)
 
         ##visualizations
-        st.subheader("Close Price VS Date Interactive chart for analysis : ")
+        st.subheader("Close Price VS Date Interactive chart for analysis:")
         st.area_chart(df6['Close'])
 
-        st.subheader("Open Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df6['Open'])
+        st.subheader("Line chart of Open and Close for analysis:")
+        st.area_chart(df6[['Open','Close']])
 
-        st.subheader("High Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df6['High'])
-
-        st.subheader("Low Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df6['Low'])
+        st.subheader("Line chart of High and Low for analysis:")
+        st.line_chart(df6[['High','Low']])
 
     elif(choose_stock == "TataMotors"):
 
@@ -435,17 +417,14 @@ def main():
         st.markdown(pred_price)
 
         ##visualizations
-        st.subheader("Close Price VS Date Interactive chart for analysis : ")
+        st.subheader("Close Price VS Date Interactive chart for analysis:")
         st.area_chart(df7['Close'])
 
-        st.subheader("Open Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df7['Open'])
+        st.subheader("Line chart of Open and Close for analysis:")
+        st.area_chart(df7[['Open','Close']])
 
-        st.subheader("High Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df7['High'])
-
-        st.subheader("Low Price VS Date Interactive chart for analysis : ")
-        st.area_chart(df7['Low'])
+        st.subheader("Line chart of High and Low for analysis:")
+        st.line_chart(df7[['High','Low']])
 
 if __name__ == '__main__':
 
