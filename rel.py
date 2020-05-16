@@ -34,24 +34,26 @@ def main():
             st.dataframe(df1.tail())
 
         ## Predictions and adding it to Dashboard
-        new_df = df1.filter(['Close'])
-        scaler = MinMaxScaler(feature_range=(0, 1)) 
-        scaled_data = scaler.fit_transform(new_df)
-        last_30_days = new_df[-30:].values
-        last_30_days_scaled = scaler.transform(last_30_days)
+        new_close_col = df1.filter(['Close'])
+        mm_scale = MinMaxScaler(feature_range=(0, 1))
+        mm_scale_data = mm_scale.fit_transform(new_close_col)
+        new_close_col_val = new_close_col[-30:].values
+        new_close_col_val_scale = mm_scale.transform(new_close_col_val)
+
         X_test = []
-        X_test.append(last_30_days_scaled)
+        X_test.append(new_close_col_val_scale)
         X_test = np.array(X_test)
         X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
-        model = load_model("reliance.model")
-        pred_price = model.predict(X_test)
-        pred_price = scaler.inverse_transform(pred_price)
+        network = load_model("reliance.model")
+        new_preds = network.predict(X_test)
+        new_preds = mm_scale.inverse_transform(new_preds)
+        #print(new_preds[0])
         
         # next day
         NextDay_Date = datetime.date.today() + datetime.timedelta(days=1)
 
         st.subheader("Predictions for the next upcoming day Close Price : " + str(NextDay_Date))
-        st.markdown(pred_price)
+        st.markdown(new_preds[0][0])
 
         st.subheader("Close Price VS Date Interactive chart for analysis:")
         st.area_chart(df1['Close'])
