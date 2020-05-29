@@ -1,0 +1,32 @@
+What is NSE?
+The National Stock market of India is the biggest stock market of India which is found in Mumbai, which was first established in Nov 1992 and it was the very first fully automated electronic exchange of India with a nationwide presence.
+
+In this project, I have implemented the following:
+how to fetch data of any stock(NSE) in real-time how you can perform basis visualizations to analyze the stock price using machine learning algorithms to predict the future stock price and how to make an interactive web-app using Streamlit framework available in python
+Machine Learning algorithm used is LSTM:
+Long Short Term Memory, usually just called “LSTMs”- are a special
+kind of Recurrent neural network which is capable of learning long-
+term dependencies i.e remembering information for long periods of
+time.
+
+One of the best courses I have taken on my career-building Python skills to succeed as a data scientist.
+
+With no prior coding experience in Python, I learn how easily this language allows you to import, clean, manipulate, and visualize data—all integral skills for any aspiring data professional or researcher.
+
+
+
+I would recommend all my linked connections with similar interests looking to boost their Python skills and wanting to begin their journey to becoming a confident data scientist should try out this awesome course by DataCamp.
+
+
+
+#python #datascience #machinelearning #deeplearning #datacamp #ai #bigdata #covid19 #computervision #artificialintelligence #Datacamp
+
+
+
+Data Scientist with Python
+
+Note: Predicting future prices is very difficult, even for machine learning models. Especially when it comes to the Stock Market, the only input your algorithm take is the stock price, there is a whole lot of information you are going to lose about the underlying factor that will affect the price. Just remember your main motive of this project is to learn new techniques and tools.
+
+Github: ​abhiwalia15​​​
+
+LinkedIn: ​Mrinal Walia​​​

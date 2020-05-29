@@ -1,4 +1,6 @@
 from imports_and_read import * 
+import keras.backend.tensorflow_backend as tb
+tb._SYMBOLIC_SCOPE.value = True
 
 def main():
     
