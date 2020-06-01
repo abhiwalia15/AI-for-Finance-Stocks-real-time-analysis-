@@ -1,3 +1,3 @@
 # AI-for-Finance-Stocks-real-time-analysis-
 AI in finance.Stocks Predictions
-Medium: https://medium.com/@waliamrinal15/real-time-nse-stocks-predictions-analysis-dashboard-in-python-f340461101c6
+DataSciencePlus: https://datascienceplus.com/real-time-national-stock-exchange-nse-of-india-close-price-stocks-predictions-in-python/
